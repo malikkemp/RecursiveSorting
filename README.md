@@ -40,3 +40,7 @@ Make sure to replace this with the directory that you've cloned your application
 ```bs
 javac ~/Projects/RecursiveSorting/src/Main.java
 java Main ~/Projects/RecursiveSorting/src/
+```
+
+## Things to keep in mind when running the program
+It's possible that the measurement using System.nanoTime() doesn't start immediately after you start the sort (or any operation). The delay can occur due to various reasons related to how Java code executes and how system resources are managed. In Java, even though you might call System.nanoTime() immediately after starting an operation (like a sort), there could be some initial setup or initialization that runs before the actual sorting algorithm begins. This is something to keep in mind when trying to measure the time against something like a stopwatch. In this case, when you run the sorting algorithm, a file for the Array Size that you specify is created for each iteration of the sort, and the timer only starts after that file is created and the program actually starts sorting.

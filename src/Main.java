@@ -19,7 +19,7 @@ public class Main
         //initialize variables
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please choose a sorting method: ");
-        System.out.println("1: Merge\n2: Quick\n3: Insertion\n4: Bubble\n5: Selection");
+        System.out.println("1: Merge\n2: Quick\n3: Insertion\n4: Bubble\n5: Selection\n6: Exit Program");
         String input = scanner.nextLine();
 
         //switch case to take user input and choose a sorting method
@@ -49,6 +49,9 @@ public class Main
                 java.awt.Toolkit.getDefaultToolkit().beep();
                 ChooseSortMethod();
                 break;
+            case 6:
+                System.out.println("Exiting Program... ");
+                System.exit(0); // Terminate the program with status code 0
             default:
                 System.out.println("Invalid selection, Please try again\n---------------------------------");
                 ChooseSortMethod();
@@ -122,7 +125,9 @@ public class Main
 
 
             //prints the total time elapsed for full sort
-            System.out.println((double) trueStartTime / 1000000000);
+            double timeInSeconds = (double) trueStartTime / 1000000000.0;
+            String formattedTime = String.format("%.3f", timeInSeconds);
+            System.out.println(" - " + formattedTime + " seconds taken for sort.");
         }
 
 
@@ -228,7 +233,9 @@ public class Main
             } // Begin for (int k = 1; k<= 100; k++)
 
             //prints the total time elapsed for full sort
-            System.out.println((double) trueStartTime / 1000000000);
+            double timeInSeconds = (double) trueStartTime / 1000000000.0;
+            String formattedTime = String.format("%.3f", timeInSeconds);
+            System.out.println(" - " + formattedTime + " seconds taken for sort.");
         }
 
     }
@@ -321,7 +328,9 @@ public class Main
             }
 
             //prints the total time elapsed for full sort
-            System.out.println((double) trueStartTime / 1000000000);
+            double timeInSeconds = (double) trueStartTime / 1000000000.0;
+            String formattedTime = String.format("%.3f", timeInSeconds);
+            System.out.println(" - " + formattedTime + " seconds taken for sort.");
         }
 
     }//End InsertionSort
@@ -408,7 +417,9 @@ public class Main
             }
 
             //prints the total time elapsed for full sort
-            System.out.println((double) trueStartTime / 1000000000);
+            double timeInSeconds = (double) trueStartTime / 1000000000.0;
+            String formattedTime = String.format("%.3f", timeInSeconds);
+            System.out.println(" - " + formattedTime + " seconds taken for sort.");
         }
     }
 
@@ -490,7 +501,9 @@ public class Main
             }
 
             //prints the total time elapsed for full sort
-            System.out.println((double) trueStartTime / 1000000000);
+            double timeInSeconds = (double) trueStartTime / 1000000000.0;
+            String formattedTime = String.format("%.3f", timeInSeconds);
+            System.out.println(" - " + formattedTime + " seconds taken for sort.");
         }
     }
 
@@ -553,7 +566,6 @@ public class Main
         int lowP = low;         // pointer to current item in low half
         int highP = mid + 1;    // pointer to current item in high half
         int aP = low;           // pointer to where each item will be put back in a[]
-
         // while the pointers have not yet reached the end of either half)
 
         while ((lowP <= mid) && (highP <= high))

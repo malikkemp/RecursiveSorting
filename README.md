@@ -4,6 +4,9 @@ The output will tell you how long in seconds it took for an algorithm to sort an
 size given by the user. This was made to test how differing hardware can handle varying algorithms and serves
 to show how important using the right algorithms can be when building very large applications. This program is ran purely from within the terminal.
 
+![image](https://github.com/user-attachments/assets/d4fa30f3-0b9a-45e9-90e0-ccefac120347)
+
+
 ### Sorting Algorithms being tested
 - Merge Sort
 - Quick Sort
